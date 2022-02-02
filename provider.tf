@@ -1,6 +1,14 @@
-provider "aws" {
-  region  = "us-east-1"
+provider "azurerm" {
+  features {}
+  subscription_id = var.azure_subscription_id
 }
+
+provider "azuread" {
+    tenant_id = var.azure_subscription_id
+}
+
+provider "random" {}
+
 
 terraform {
   backend "local" {
