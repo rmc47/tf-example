@@ -66,7 +66,6 @@ resource "azurerm_role_assignment" "product-release-example-access" {
     principal_id = azuread_service_principal.product-release-example-principal.object_id
 }
 
-
 output "principal-password" {
   value = azuread_service_principal_password.product-release-example-principal-password.value
 }
